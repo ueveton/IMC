@@ -1,8 +1,7 @@
 .container {
-  height: 400px;
-  width: 300px;
-  background-color: #c88245;
+  height: 300px;
+  width: 500px;
+  background-color: rgb(191, 124, 65, 0.8);
   padding: 2rem;
   border-radius: 10px;
-  opacity: 0.8;
 }
