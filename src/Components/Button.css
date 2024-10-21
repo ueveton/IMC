@@ -1,0 +1,25 @@
+#calc-btn, #clear-btn{
+    width: 150px;
+    padding: 1rem 0.5rem;
+    border: 1px solid white;
+    border-radius: 10px;
+    background-color: rgba(230, 186, 67, 0.8);
+    text-align: center;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+#clear-btn {
+    background-color: rgba(223, 61, 49, 0.8);
+}
+#clear-btn:hover {
+    background-color: rgba(170, 22, 11, 0.8);
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+#calc-btn:hover {
+    background-color: rgba(211, 166, 42, 0.8);
+    transition: 0.2s;
+    cursor: pointer;
+}

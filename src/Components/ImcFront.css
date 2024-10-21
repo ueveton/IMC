@@ -31,7 +31,8 @@
 }
 
 .form-control input:hover {
-    background-color: aqua;
+    background-color: rgb(231, 204, 164, 0.8);
+    cursor: pointer;
 }
 
 .action-control {
