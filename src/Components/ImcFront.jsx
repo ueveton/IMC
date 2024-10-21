@@ -32,13 +32,13 @@ export const ImcFront = () => {
                         </label>
                     </div>
                     <div className='form-control'>
-                        <label htmlFor="weight">Peso:
+                        <label htmlFor="width">Peso:
                             <input 
                                 type="text" 
-                                name='weight'
-                                id='weight' 
+                                name='width'
+                                id='width' 
                                 placeholder='Exemplo 80,5'
-                                onChange={(e) => setWeight(e.target.value)}
+                                onChange={(e) => setWidth(e.target.value)}
                                 value={width}
                             />
                         </label>
