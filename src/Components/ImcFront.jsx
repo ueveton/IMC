@@ -13,6 +13,19 @@ export const ImcFront = () => {
         setWidth("");
         setHeight("");
     }
+    const validDigits = (text) => {
+        return text.replace(/[^0-9,]/g, '')
+    }
+
+    const handleHeightChange = (e) => {
+        const updateValid = validDigits(e.target.value)
+        setHeight(updateValid)
+    }
+
+    const handleWidthChange = (e) => {
+        const updateValid = validDigits(e.target.value)
+        setWidth(updateValid)
+    }
 
     return (
         <div id='front-container'>
@@ -26,7 +39,7 @@ export const ImcFront = () => {
                                 name='height'
                                 id='height' 
                                 placeholder='Exemplo 1,75'
-                                onChange={(e) => setHeight(e.target.value)}
+                                onChange={(e) => handleHeightChange(e)}
                                 value={height}
                             />
                         </label>
@@ -38,7 +51,7 @@ export const ImcFront = () => {
                                 name='width'
                                 id='width' 
                                 placeholder='Exemplo 80,5'
-                                onChange={(e) => setWidth(e.target.value)}
+                                onChange={(e) => handleWidthChange(e)}
                                 value={width}
                             />
                         </label>
