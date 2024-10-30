@@ -12,14 +12,35 @@
 #clear-btn {
     background-color: rgba(223, 61, 49, 0.8);
 }
+
+#back-btn {
+    align-self: center;
+}
 #clear-btn:hover {
     background-color: rgba(170, 22, 11, 0.8);
     cursor: pointer;
     transition: 0.2s;
 }
 
-#calc-btn:hover {
+#calc-btn:hover,
+#back-btn:hover {
     background-color: rgba(211, 166, 42, 0.8);
     transition: 0.2s;
     cursor: pointer;
+}
+
+.good {
+    color: #12db34;
+}
+
+.low {
+    color: #dbce12;
+}
+
+.medium {
+    color: #db6212;
+}
+
+.high {
+    color: #db1913;
 }

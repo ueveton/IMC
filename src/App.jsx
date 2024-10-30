@@ -9,12 +9,26 @@ function App() {
   const calcImc = (e, height, width) => {
     e.preventDefault()
     if (!width || !height)return
-    console.log("Executou o clique")
     const heightFloat = +height.replace(",", ".")
     const widthFloat = +width.replace(",", ".")
 
     const imcResult = (widthFloat / (heightFloat * heightFloat)).toFixed(1)
     setImc(imcResult)
+
+    data.forEach((item) => {
+      if (imcResult >= item.min && imcResult <= item.max){
+        setInfo(item.info)
+        setInfoClass(item.infoClass)
+      }
+    })
+
+    if (!info) return
+  }
+
+  const resetCalc = (e) => {
+    setImc("")
+    setInfo("")
+    setInfoClass("")
   }
 
   const [imc, setImc] = useState("")
@@ -27,7 +41,7 @@ function App() {
         {!imc ? 
           (<ImcFront calcImc={calcImc} />) 
           : 
-          (<ImcTable data={data} />)}
+          (<ImcTable data={data} imc={imc} info={info} infoClass={infoClass} resetCalc={resetCalc} />)}
       </div>
     </>
   )
